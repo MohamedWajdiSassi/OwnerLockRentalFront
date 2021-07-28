@@ -21,7 +21,7 @@ export class AddDeviceComponent implements OnInit {
    
   }
   saveDevice( f:any) {
-    console.log(f);
+    //console.log(f);
     
     console.log(f.value)
     

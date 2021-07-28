@@ -12,18 +12,18 @@ const httpOptions = {
 })
 export class DeviceService {
   
-  device :Device
+  device :Device;
 
   constructor(private http: HttpClient) { }
    httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  saveDevice(value: any): Observable<any> {
+  saveDevice(value: Device): Observable<Device> {
     
+    console.log(value)
     
-    return this.http.post<any>(environment.apiUrl+'/deviceInfo/createDevice/61015420ebdb9928b379344f/mychannel' , {
+    return this.http.post<Device>(environment.apiUrl+'/deviceInfo/createDevice/61015420ebdb9928b379344f/mychannel' , 
       value , httpOptions
-    }
    );
   }
   getAllDevices(): Observable<any> {
