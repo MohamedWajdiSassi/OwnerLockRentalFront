@@ -1,1 +1,46 @@
-<p>add-device works!</p>
+<form action="" #f="ngForm" (ngSubmit)="saveDevice(f)" method="get" class="form-example">
+  
+    <div class="form-example">
+      <label for="exampleInpuTitle"> title: {{device?.title}} </label>
+      <input type="text" [(ngModel)]="device['title']" #title="ngModel"  name="title" id="title"  required>
+    </div>
+    <div class="form-example">
+        <label for="exampleInpuLocation">location: </label>
+        <input type="text" [(ngModel)]="device.location" name="location" id="location"  required>
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuDeviceCategory">deviceCategory </label>
+        <input type="text" [(ngModel)]="device.deviceCategory" #deviceCategory="ngModel" name="deviceCategory" id="deviceCategory"  required>
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuDescription">description </label>
+        <input type="text" [(ngModel)]="device.description" #description="ngModel" name="description" id="description"  required>
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuImage">image: </label>
+        <input type="text" [(ngModel)]="device.image" #image="ngModel" name="image" id="image"  required>
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuPrice">price: </label>
+        <input type="price" [(ngModel)]="device.price" #price="ngModel" name="price" id="price"  >
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuName">numBedRooms : </label>
+        <input type="text" [(ngModel)]="device.numBedRooms" #numBedRooms="ngModel" name="numBedRooms" id="numBedRooms"  >
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuNumPerson">numPerson </label>
+        <input type="text" [(ngModel)]="device.numPerson" #numPerson="ngModel" name="numPerson" id="numPerson" >
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuColor">color: </label>
+        <input type="text" [(ngModel)]="device.color" #color="ngModel" name="color" id="color" required>
+      </div>
+    <div class="form-example">
+      <label for="exampleInpuModel">model: </label>
+      <input type="text" [(ngModel)]="device.model" #model="ngModel" name="model" id="model"  required>
+    </div>
+    <div class="form-example">
+      <input type="submit" value="Add your device!">
+    </div>
+  </form>

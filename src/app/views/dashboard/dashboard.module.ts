@@ -10,6 +10,7 @@ import { DeviceHistoryComponent } from './device-history/device-history.componen
 import { CustomerReqComponent } from './customer-req/customer-req.component';
 import { DeviceTruckingComponent } from './device-trucking/device-trucking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { CustomerInfoComponent } from './customer-info/customer-info.component';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
+ 
   ]
 })
 export class DashboardModule { }
