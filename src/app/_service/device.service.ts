@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Device } from '../model/device.model';
+import { Device } from '../model/Device.model';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,32 +11,33 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DeviceService {
-  
+  devices : Device[];
   device :Device;
+  channel = "mychannel";
+  ownerId : string ;
 
   constructor(private http: HttpClient) { }
-   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
+  
   saveDevice(value: Device): Observable<Device> {
     
     console.log(value)
-    
-    return this.http.post<Device>(environment.apiUrl+'/deviceInfo/createDevice/61015420ebdb9928b379344f/mychannel' , 
-      value , httpOptions
+
+    return this.http.post<Device>(environment.apiUrl+'/deviceInfo/createDevice/6109621be14bfd1aaaea5de7/'+this.channel , 
+    JSON.stringify(value), httpOptions
    );
   }
   getAllDevices(): Observable<any> {
-    return this.http.get(environment.apiUrl+'/deviceInfo/allDevices/owner/channel');
+    return this.http.get(environment.apiUrl+'/deviceInfo/allDevices/wajdi%20sassi/'+this.channel,{ });
   }
-  deleteHero(id: number): Observable<unknown> {
+  deleteDevice(id: String): Observable<any> {
     
-    return this.http.delete(environment.apiUrl+'/deviceInfo/deleteDevice/channel/idDevice')
+    return this.http.delete(environment.apiUrl+'/deviceInfo/deleteDevice/'+this.channel+'/'+id)
      
   }
-  updateHero(value: any): Observable<any> {
-    return this.http.put(environment.apiUrl+'/deviceInfo/updateDevice/channel/idOwner/idDevice',value)   
+  updateDevice(value: Device): Observable<Device> {
+    return this.http.put<Device>(environment.apiUrl+'/deviceInfo/updateDevice/'+this.channel+'/6109621be14bfd1aaaea5de7 /'+this.device.idDevice, JSON.stringify(value) ,httpOptions) ; 
   }
   
 
 }
+//return this.httpClient.put<Product>(this.apiServer + '/products/' + id, JSON.stringify(product), this.httpOptions)

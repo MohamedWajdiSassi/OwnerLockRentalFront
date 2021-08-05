@@ -1,1 +1,106 @@
-<p>device-list works!</p>
+<div></div>
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">title</th>
+      <th scope="col">location</th>
+      <th scope="col">deviceCategory</th>
+      <th scope="col">description</th>
+      <th scope="col">image</th>
+      <th scope="col">price</th>
+      <th scope="col">numBedRooms</th>
+      <th scope="col">numPerson</th>
+      <th scope="col">color</th>
+      <th scope="col">model</th>
+      <th scope="col">action</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let device of devices">
+      
+      <td>{{device.idDevice}}</td>
+      <td>{{device.title}}</td>
+      <td>{{device.location}}</td>
+      <td>{{device.deviceCategory}}</td>
+      <td>{{device.description}}</td>
+      <td>{{device.image}}</td>
+      <td>{{device.price}}</td>
+      <td>{{device.numBedRooms}}</td>
+      <td>{{device.numPerson}}</td>
+      <td>{{device.color}}</td>
+      <td>{{device.model}}</td>
+      <button type="button" data-toggle="modal" data-target="#exampleModal"> Update</button>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Device</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+          <form action="" #f="ngForm" (ngSubmit)="updateDevice(device.idDevice,f)" method="get" class="form-example">
+  
+            <div class="form-example">
+              <label for="exampleInpuTitle"> title:  </label>
+              <input type="text" ngModel #title="ngModel"  name="title" id="title"  required>
+            </div>
+            <div class="form-example">
+                <label for="exampleInpuLocation">location: </label>
+                <input type="text" ngModel  #location="ngModel" name="location" id="location"  required>
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuDeviceCategory">deviceCategory </label>
+                <input type="text" ngModel #deviceCategory="ngModel" name="deviceCategory" id="deviceCategory"  required>
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuDescription">description </label>
+                <input type="text" ngModel #description="ngModel" name="description" id="description"  required>
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuImage">image: </label>
+                <input type="text" ngModel #image="ngModel" name="image" id="image"  required>
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuPrice">price: </label>
+                <input type="price" ngModel #price="ngModel" name="price" id="price"  >
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuName">numBedRooms : </label>
+                <input type="text" ngModel #numBedRooms="ngModel" name="numBedRooms" id="numBedRooms"  >
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuNumPerson">numPerson </label>
+                <input type="text" ngModel #numPerson="ngModel" name="numPerson" id="numPerson" >
+              </div>
+              <div class="form-example">
+                <label for="exampleInpuColor">color: </label>
+                <input type="text" ngModel #color="ngModel" name="color" id="color" required>
+              </div>
+            <div class="form-example">
+              <label for="exampleInpuModel">model: </label>
+              <input type="text" ngModel #model="ngModel" name="model" id="model"  required>
+            </div>
+            
+            <div class="form-example">
+             
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary"  >Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <button type="button" (click)="deleteDevice(device.idDevice)"> Delete</button>
+    </tr>
+   
+  </tbody>
+</table>

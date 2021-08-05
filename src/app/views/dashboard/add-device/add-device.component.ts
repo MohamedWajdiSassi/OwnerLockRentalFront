@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Device } from 'src/app/model/device.model';
+import { Device } from 'src/app/model/Device.model';
 import { DeviceService } from 'src/app/_service/device.service';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-add-device',
@@ -15,10 +17,16 @@ export class AddDeviceComponent implements OnInit {
   
   
 
-  constructor(private deviceService :DeviceService, private router:Router) { }
+  constructor(private deviceService :DeviceService, private router:Router ,private toastr: ToastrService) { }
 
   ngOnInit(): void {
    
+  }
+  showSuccess() {
+    this.toastr.success('Your device has been successfully added!', 'Well Done!');
+  }
+  showFaild(){
+    this.toastr.warning('Something Wrong you need to try again! ','Warning');
   }
   saveDevice( f:any) {
     //console.log(f);
@@ -29,6 +37,14 @@ export class AddDeviceComponent implements OnInit {
     
     );
     
+   } 
+   test(){
+     if (this.saveDevice != null){
+       this.showSuccess
+     }else{
+       this.showFaild
+     }
    }
+   
 
 }

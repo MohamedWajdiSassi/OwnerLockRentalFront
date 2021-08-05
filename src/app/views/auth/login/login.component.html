@@ -11,9 +11,9 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+    <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit(f)"> 
+      <input type="text" ngModel #email="ngModel" id="email" class="fadeIn second" name="email" placeholder="Email" required>
+      <input type="password" ngModel #passwd="ngModel" id="passwd" class="fadeIn third" name="passwd" placeholder="Password">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
 

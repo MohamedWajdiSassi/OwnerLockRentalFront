@@ -1,1 +1,40 @@
-<p>device-history works!</p>
+<form action="" #f="ngForm" (ngSubmit)="saveHistory(f)" method="get" class="form-example">
+  
+    <div class="form-example">
+      <label for="exampleInpuTitle"> pickUpDate:  </label>
+      <input type="text" ngModel #pickUpDate="ngModel"  name="pickUpDate" id="pickUpDate"  required>
+    </div>
+    <div class="form-example">
+        <label for="exampleInpuLocation">returnDate: </label>
+        <input type="text" ngModel  #returnDate="ngModel" name="returnDate" id="returnDate"  required>
+      </div>
+      <div class="form-example">
+        <label for="exampleInpuDeviceCategory">idDevice </label>
+        <input type="text" ngModel #idDevice="ngModel" name="idDevice" id="idDevice"  required>
+      </div>
+      
+      <input type="submit" (click)="showSuccess()" value="Add your history!">
+    
+</form>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">PickUp date</th>
+        <th scope="col">return Date</th>
+        <th scope="col">idDvice</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let history of historys">
+        
+        
+        <td>{{history.pickUpDate}}</td>
+        <td>{{history.returnDate}}</td>
+        <td>{{history.idDevice}}</td>
+      
+   
+      </tr>
+    </tbody>
+  </table>
+  
