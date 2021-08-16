@@ -43,4 +43,8 @@
     <div class="form-example">
       <input type="submit" (click)="showSuccess()" value="Add your device!">
     </div>
+    <h1> File Uploud</h1>
+    <input type="file" (change)="onFileSelected($event)" accept="*.png.jpg">
+  
+    <button (click)="onUpload()">Upload</button>
   </form>

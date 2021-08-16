@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {AngularFireStorageModule} from '@angular/fire/storage'
+import {AngularFireModule} from '@angular/fire'
 
 
 
@@ -24,6 +26,16 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     HttpClientModule,
     FormsModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp({
+      apiKey : "AIzaSyAcqHSc_eaGWPKbKYaOAWwDijbZ3oE-EXc" , 
+    authDomain : "ownerlocksimags.firebaseapp.com" , 
+    projectId : "ownerlocksimags" , 
+    storageBucket : "ownerlocksimags.appspot.com" , 
+    messagingSenderId : "989620048770" , 
+    appId : "1: 989620048770: web: e32f63811e0650b1c5b59b" , 
+    measurementId : "G-MECCSN7PKK" 
+    })
     
     
   ],
