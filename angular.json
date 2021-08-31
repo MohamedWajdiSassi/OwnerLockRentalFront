@@ -34,10 +34,28 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/css/app.min.css",
+              "src/assets/css/core.min.css",
+              "src/assets/css/style.min.css",
+              "node_modules/jquery-typeahead/dist/jquery.typeahead.min.css"
             ],
             "scripts": [
-              "src/assets/Js/Javascript.js"
+              "src/assets/js/app.min.js",
+              "src/assets/js/core.min.js",
+              "src/assets/js/script.min.js",
+              "node_modules/bloodhound-js/dist/bloodhound.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-typeahead/dist/jquery.typeahead.min.js",
+              "node_modules/chart.js/dist/Chart.min.js",
+              "node_modules/jquery/dist/jquery.js",
+              "./src/assets/js/chart.js",
+              
+              "node_modules/chart.js/dist/Chart.bundle.js"
+
+        
+              
+
             ]
           },
           "configurations": {
@@ -104,9 +122,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/css/app.min.css",
+              "src/assets/css/core.min.css",
+              "src/assets/css/style.min.css",
+              "node_modules/jquery-typeahead/dist/jquery.typeahead.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/app.min.js",
+              "src/assets/js/core.min.js",
+              "src/assets/js/script.min.js",
+              "node_modules/bloodhound-js/dist/bloodhound.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-typeahead/dist/jquery.typeahead.min.js"
+            ]
           }
         }
       }

@@ -4,13 +4,16 @@ import { Device } from 'src/app/model/Device.model';
 import { DeviceService } from 'src/app/_service/device.service';
 import { FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import {enableProdMode} from '@angular/core';
 
 @Component({
   selector: 'app-device-list',
   templateUrl: './device-list.component.html',
   styleUrls: ['./device-list.component.scss']
 })
+
 export class DeviceListComponent implements OnInit {
+  
   devices: any = [];
   device: Device;
   deviceLoaded: boolean = false;
@@ -18,16 +21,20 @@ export class DeviceListComponent implements OnInit {
   constructor(private deviceService: DeviceService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    
     this.getAllDevicesList()
-    this.updateDevice
+    
   }
   getAllDevicesList() {
 
-    this.deviceService.getAllDevices().pipe().subscribe(data => {
+    this.deviceService.getAllDevices().subscribe(data => {
+
+      console.log("###########################")
 
       console.log(data)
 
       this.devices = data;
+      console.log(this.devices)
 
 
     })

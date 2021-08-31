@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {AngularFireStorageModule} from '@angular/fire/storage'
 import {AngularFireModule} from '@angular/fire'
+import { ChartsModule } from 'ng2-charts';
+
 
 
 
@@ -26,6 +28,7 @@ import {AngularFireModule} from '@angular/fire'
     SharedModule,
     HttpClientModule,
     FormsModule,
+    ChartsModule,
     AngularFireStorageModule,
     AngularFireModule.initializeApp({
       apiKey : "AIzaSyAcqHSc_eaGWPKbKYaOAWwDijbZ3oE-EXc" , 

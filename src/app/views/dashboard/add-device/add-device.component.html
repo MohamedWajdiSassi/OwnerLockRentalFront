@@ -1,50 +1,122 @@
-<form action="" #f="ngForm" (ngSubmit)="saveDevice(f)" method="get" class="form-example">
-  
-    <div class="form-example">
-      <label for="exampleInpuTitle"> title:  </label>
-      <input type="text" ngModel #title="ngModel"  name="title" id="title"  required>
-    </div>
-    <div class="form-example">
-        <label for="exampleInpuLocation">location: </label>
-        <input type="text" ngModel  #location="ngModel" name="location" id="location"  required>
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuDeviceCategory">deviceCategory </label>
-        <input type="text" ngModel #deviceCategory="ngModel" name="deviceCategory" id="deviceCategory"  required>
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuDescription">description </label>
-        <input type="text" ngModel #description="ngModel" name="description" id="description"  required>
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuImage">image: </label>
-        <input type="text" ngModel #image="ngModel" name="image" id="image"  required>
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuPrice">price: </label>
-        <input type="price" ngModel #price="ngModel" name="price" id="price"  >
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuName">numBedRooms : </label>
-        <input type="text" ngModel #numBedRooms="ngModel" name="numBedRooms" id="numBedRooms"  >
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuNumPerson">numPerson </label>
-        <input type="text" ngModel #numPerson="ngModel" name="numPerson" id="numPerson" >
-      </div>
-      <div class="form-example">
-        <label for="exampleInpuColor">color: </label>
-        <input type="text" ngModel #color="ngModel" name="color" id="color" required>
-      </div>
-    <div class="form-example">
-      <label for="exampleInpuModel">model: </label>
-      <input type="text" ngModel #model="ngModel" name="model" id="model"  required>
-    </div>
-    <div class="form-example">
-      <input type="submit" (click)="showSuccess()" value="Add your device!">
-    </div>
-    <h1> File Uploud</h1>
-    <input type="file" (change)="onFileSelected($event)" accept="*.png.jpg">
-  
-    <button (click)="onUpload()">Upload</button>
-  </form>
+
+          <div class="col-12" >
+            <div class="card">
+              <h4 class="card-title"><strong>Device</strong> details</h4>
+
+              <form  #f="ngForm" (ngSubmit)="saveDevice(f)">
+              <div class="card-body" >
+                <div class="row">
+                  
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Title :</label>
+                      <input type="text" ngModel #title="ngModel"  class="form-control" name="title" id="title" placeholder="title...">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Location :</label>
+                      <input type="text" ngModel  #location="ngModel" class="form-control" name="location" id="location" placeholder="location...">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Device Category :</label>
+                      <input type="text" ngModel #deviceCategory="ngModel" class="form-control" name="deviceCategory" id="deviceCategory" placeholder="category...">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    
+                    <p>Images :</p>
+                    <div class="input-group form-type-material file-group">
+                      
+                        <input type="text" class="form-control file-value" >
+                        <input type="file"  accept=".png.jpg.jpeg" multiple>
+                        <label>Choose file...</label>
+                      
+                      <span class="input-group-append">
+                        <button class="btn btn-light file-browser" 
+                          type="button"><i class="fa fa-upload"  ></i></button>
+                        
+                      </span>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Price :</label>
+                      <input type="text" ngModel #price="ngModel" class="form-control" name="price" id="price" placeholder="price per euro...">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Number of bedrooms  :</label>
+                      <input type="text" ngModel #numBedRooms="ngModel" class="form-control" name="numBedRooms" id="numBedRooms" placeholder="How many room... ">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Number of Persons :</label>
+                      <input type="text" ngModel #numPerson="ngModel" class="form-control"name="numPerson" id="numPerson" placeholder="how many person...">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Color : </label>
+                      <input type="text" ngModel #color="ngModel" class="form-control" name="color" id="color" placeholder="color...">
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="input-normal">Model :</label>
+                      <input type="text" ngModel #model="ngModel" class="form-control" name="model" id="model" placeholder="model...">
+                    </div>
+                  </div>
+
+
+                 
+
+
+               
+
+                  <div class="col-md-4">
+                    
+
+                    <div class="form-group">
+                      <label for="textarea">Description :</label>
+                      <textarea class="form-control" ngModel #description="ngModel" name="description" id="description" placeholder="house descrption..." rows="6"></textarea>
+                    </div>
+                  </div>
+                  <footer class="card-footer flexbox align-items-center">
+                    
+                    <div class="form-example">
+                     <input type="submit"  (click)="saveDevice(f)" [routerLink]="['/dashboard/device-lists']"  value="Add your device!">
+                    </div>
+                  </footer>
+
+
+
+                 
+                </div>
+              
+              </div>
+              </form>
+            </div>
+          </div>

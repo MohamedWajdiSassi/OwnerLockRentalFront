@@ -11,6 +11,10 @@ import { CustomerReqComponent } from './customer-req/customer-req.component';
 import { DeviceTruckingComponent } from './device-trucking/device-trucking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { ChartsComponent } from './charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
+
+
 
 
 @NgModule({
@@ -21,13 +25,15 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     DeviceHistoryComponent,
     CustomerReqComponent,
     DeviceTruckingComponent,
-    CustomerInfoComponent
+    CustomerInfoComponent,
+    ChartsComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
  
   ]
 })

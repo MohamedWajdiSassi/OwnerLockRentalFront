@@ -1,8 +1,156 @@
-<p>
-    <ngb-alert [dismissible]="false">
-      <strong>Warning!</strong> Better check yourself, you're not looking too good .
-    </ngb-alert>
-    
-  </p>
+<div class="main-content">
+  <div class="row">
 
-<button class="btn btn-primary" (click)="showSuccess()">test</button> 
+
+    <div class="col-lg-4">
+      <div class="card card-body">
+        <h6>
+          <span class="text-uppercase">Total Houses</span>
+          <span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
+        </h6>
+        <br>
+        <p class="fs-28 fw-100">{{houses}}</p>
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="text-gray fs-12"><i class="ti-stats-down text-danger mr-1"></i> Your total houses thay you owned
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card card-body">
+        <h6>
+          <span class="text-uppercase">Total Bikes</span>
+          <span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
+        </h6>
+        <br>
+        <p class="fs-28 fw-100">2</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 65%; height: 4px;" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="text-gray fs-12"><i class="ti-stats-up text-success mr-1"></i> Your total E-bikes thay you owned
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card card-body">
+        <h6>
+          <span class="text-uppercase">Number Of Customers</span>
+          <span class="float-right"><a class="btn btn-xs btn-primary" href="index.html#">View</a></span>
+        </h6>
+        <br>
+        <p class="fs-28 fw-100">4</p>
+        <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 65%; height: 4px;" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="4"></div>
+        </div>
+        <div class="text-gray fs-12"><i class="ti-stats-down text-danger mr-1"></i> Number of customers this month
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <h4 class="card-title"><strong>Horizontal bar</strong> chart - 1</h4>
+
+        <div class="card-body">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <h5 class="card-title"><strong>Customers</strong></h5>
+
+        <div class="media-list media-list-sm media-list-hover media-list-divided scrollable" style="height: 295px">
+          <div class="media media-single">
+            <a href="general.html#">
+              <img class="avatar" src="../assets/img/avatar/daly.jpg" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h6><a href="general.html#">Mohamed Ali May</a></h6>
+              <small class="text-fader">Customer</small>
+            </div>
+
+            <div class="media-right">
+              <a class="btn btn-xs btn-primary" href="#">View</a>
+            </div>
+          </div>
+
+
+          <div class="media media-single">
+            <a href="#">
+              <img class="avatar" src="../assets/img/avatar/ahmed.jpg" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h6><a href="general.html#">Ahmed Hmayer</a></h6>
+              <small class="text-fader">Customer</small>
+            </div>
+
+            <div class="media-right">
+              <a class="btn btn-xs btn-primary" href="#">View</a>
+            </div>
+          </div>
+
+
+          <div class="media media-single">
+            <a href="general.html#">
+              <img class="avatar" src="../assets/img/avatar/samih.jpg" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h6><a href="general.html#">Samih Sboui</a></h6>
+              <small class="text-fader">Customer</small>
+            </div>
+
+            <div class="media-right">
+              <a class="btn btn-xs btn-primary" href="#">View</a>
+            </div>
+          </div>
+
+
+
+          <div class="media media-single">
+            <a href="general.html#">
+              <img class="avatar" src="../assets/img/avatar/hamza.jpg" alt="...">
+            </a>
+
+            <div class="media-body">
+              <h6><a href="general.html#">Hamza Ouertani</a></h6>
+              <small class="text-fader">Customer</small>
+            </div>
+
+            <div class="media-right">
+              <a class="btn btn-xs btn-primary" href="#">View</a>
+            </div>
+          </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    
+    </script>

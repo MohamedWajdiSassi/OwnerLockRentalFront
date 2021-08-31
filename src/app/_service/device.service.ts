@@ -22,7 +22,7 @@ export class DeviceService {
     
     console.log(value)
 
-    return this.http.post<Device>(environment.apiUrl+'/deviceInfo/createDevice/6109621be14bfd1aaaea5de7/'+this.channel , 
+    return this.http.post<Device>(environment.apiUrl+'/deviceInfo/createDevice/612cd3fb3bac4b0fcbd8bea2/'+this.channel , 
     JSON.stringify(value), httpOptions
    );
   }
@@ -35,7 +35,7 @@ export class DeviceService {
      
   }
   updateDevice(value: Device): Observable<Device> {
-    return this.http.put<Device>(environment.apiUrl+'/deviceInfo/updateDevice/'+this.channel+'/6109621be14bfd1aaaea5de7 /'+this.device.idDevice, JSON.stringify(value) ,httpOptions) ; 
+    return this.http.put<Device>(environment.apiUrl+'/deviceInfo/updateDevice/'+this.channel+'/612cd3fb3bac4b0fcbd8bea2/'+this.device.idDevice, JSON.stringify(value) ,httpOptions) ; 
   }
   
 

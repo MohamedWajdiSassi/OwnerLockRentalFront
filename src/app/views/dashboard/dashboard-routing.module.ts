@@ -7,6 +7,8 @@ import { DeviceHistoryComponent } from './device-history/device-history.componen
 import { CustomerReqComponent } from './customer-req/customer-req.component';
 import { DeviceTruckingComponent } from './device-trucking/device-trucking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
+import { ChartsComponent } from './charts/charts.component';
+
 
 
 
@@ -42,6 +44,10 @@ const routes: Routes = [
   {
     path:'customer-info',
     component:CustomerInfoComponent
+  },
+  {
+    path:'charts',
+    component:ChartsComponent
   }
 ];
 
